@@ -64,6 +64,9 @@ header p {
       text-align: center;
       margin-bottom: 15px;
 }
+header nav {
+      display: none;
+}
 header nav ul.lista-superior {
       margin-bottom: 15px;
 }
@@ -78,10 +81,44 @@ header div.burger-menu {
       padding: 7px;
       margin: 25px auto 0;
 }
-
-/* SECCIONES */
-
-/*  PRODUCTOS */
+/* MAIN */
+main {
+      width: 90%;
+      margin: auto;
+}
+main section h4 {
+      font-size: var(--titulos);
+      color: var(--gris-oscuro);
+      margin-bottom: 20px;
+}
+main section article {
+      background-color: white;
+      margin-bottom: 10px;
+}
+main section article div {
+      border-top: 1px solid var(--gris-claro);
+      padding: 15px;
+}
+main section article p.main--precio {
+      font-size: var(--precio);
+}
+main section article p.main--descuento {
+      font-size: var(--descuento);
+      color: var(--verde);
+      padding-bottom: 15px;
+}
+main section article h5 {
+      display: none;
+}
+main section article div div.main--envio {
+      width: 1.2em;
+      height: 1.2em;
+      color: var(--verde);
+      border: 1px solid var(--verde);
+      border-radius: 50%;
+      padding-left: 5px;
+      padding-top: 5px;
+}
 
 /* FOOTER */
 footer {
@@ -99,4 +136,21 @@ footer article i {
 }
 footer span {
       font-size: var(--parrafos);
+}
+
+@media (min-width: 361px) {
+      header div.burger-menu {
+            display: none;
+      }
+      header nav {
+            display: block;
+      }
+      main section article h5 {
+            display: inline;
+            font-size: var(--descripcion);
+            color: var(--gris-oscuro);
+      }
+      main section article {
+            box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      }
 }
